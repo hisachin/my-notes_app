@@ -16,7 +16,6 @@ export const useNotes = () => {
             setLoading(true);
             const data = await getAllNotes();
             if(data){
-                console.log("1");   
                 setNotes(data);
                 dispatch({type:actionTypes.ADD_NOTE,payload:data});
             }

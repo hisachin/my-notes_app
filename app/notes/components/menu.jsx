@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { RiHome2Line, RiDeleteBinLine, RiSettings2Line, RiLoginBoxLine } from 'react-icons/ri';
+import { RiHome2Line, RiDeleteBinLine, RiLoginBoxLine } from 'react-icons/ri';
 import { MdOutlineDriveFileMove } from "react-icons/md";
 
 const Menu = () => {
@@ -24,10 +24,6 @@ const Menu = () => {
 
             <nav className="bg-slate-300 p-4 mt-auto">
                 <ul className="flex flex-col gap-2 justify-between p-1 text-black text-sm">
-                    <Link href="/notes" className="flex items-center p-2  bg-slate-50 rounded-lg cursor-pointer shadow-sm hover:bg-slate-200 ">
-                        <RiSettings2Line size={20} />
-                        <span className="ml-2">Settings</span>
-                    </Link>
                     <Link href="/" className="flex items-center p-2 bg-slate-50 rounded-lg cursor-pointer shadow-sm hover:bg-slate-200 ">
                         <RiLoginBoxLine size={20} />
                         <span className="ml-2">Sign In</span>

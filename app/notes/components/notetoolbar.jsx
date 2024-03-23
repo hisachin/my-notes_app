@@ -25,7 +25,7 @@ const NoteToolBar = () => {
   }
 
   return (
-    <div className="h-16 p-4 bg-white rounded-lg shadow-sm flex flex-row gap-2 items-center">
+    <div className="h-16 w-52 md:w-64 p-4 rounded-tl-lg rounded-tr-lg shadow-sm flex flex-row gap-2 justify-center items-center bg-white text-gray-900 top-0 fixed">
       <div className="cursor-pointer" onClick={handleAddNote}><LuPlusSquare /></div>
       <div className="cursor-pointer" onClick={handleDeleteNote} ><RiDeleteBinLine /></div>
       <div className="cursor-pointer"><LuSearch /></div>
