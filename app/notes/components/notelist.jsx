@@ -18,6 +18,7 @@ const NoteList = () => {
   }
 
   useEffect(() => {
+    console.log("11");
     initialNotesRender();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

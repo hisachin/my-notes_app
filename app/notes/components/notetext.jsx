@@ -10,17 +10,19 @@ import { getFirstLine } from "../utils/parseHtml";
 
 
 const NoteText = () => {
+    const { updateNoteData } = useNotes();
     const { state,dispatch } = useContext(NoteContext);
     const [content,setContent] = useState("");
     const [showRichText,setShowRichtText] = useState(false);
 
-    const handleContentChange = (newContent) => {
+    const handleContentChange = async (newContent) => {
         const newNotes = {
             id:state.selectedNote,
             title:getFirstLine(newContent),
             description: newContent
         }
         dispatch({type:actionTypes.UPDATE_NOTE,payload:newNotes});
+        await updateNoteData(newNotes);
     };
 
     const updateNoteContent = async () => {

@@ -3,23 +3,23 @@ export const actionTypes = {
     DELETE_NOTE: 'DELETE_NOTE',
     UPDATE_NOTE: 'UPDATE_NOTE',
     SELECT_NOTE: 'SELECT_NOTE',
-  };
+};
 
 export const initialNoteDetails = {
-    clearRichText:false,
-    selectedNote : null,
-    notes : []
+    clearRichText: false,
+    selectedNote: null,
+    notes: []
 };
 
 
-export const notesReducer = (state,action) => {
-    const {type,payload} = action;
-    switch(type){
+export const notesReducer = (state, action) => {
+    const { type, payload } = action;
+    switch (type) {
         case actionTypes.ADD_NOTE:
             return {
                 ...state,
-                notes: [...payload,...state.notes],
-                clearRichText:true
+                notes: [...payload, ...state.notes],
+                clearRichText: true
             }
         case actionTypes.SELECT_NOTE:
             return {
@@ -34,16 +34,16 @@ export const notesReducer = (state,action) => {
             }
         case actionTypes.UPDATE_NOTE:
             let newNotes = state.notes.map((note) => {
-                if(note.id == payload.id){
+                if (note.id == payload.id) {
                     return payload
-                }else{
+                } else {
                     return note;
                 }
             });
             return {
                 ...state,
                 notes: newNotes,
-                clearRichText:false
+                clearRichText: false
             }
         default:
             throw new Error(`No case for type ${type} found in notesReducer.`);
