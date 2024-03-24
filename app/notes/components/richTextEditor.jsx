@@ -34,17 +34,17 @@ const RichTextEditor = ({ initialContent, onContentChange }) => {
 
 RichTextEditor.modules = {
   toolbar: [
-    [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+    [{ 'header': [1, 2, 3, 4, 5, 6,false] }],
+    [{ 'font': [] }],
     [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-    ['bold', 'italic', 'underline', 'strike'],
-    ['link', 'image'],
-    ['clean']
+    ['bold', 'italic', 'underline', 'strike','blockquote','code-block'],
+    ['link', 'image']
   ],
 };
 
 RichTextEditor.formats = [
-  'header', 'font', 'size',
-  'bold', 'italic', 'underline', 'strike', 'blockquote',
+  'header', 'font',
+  'bold', 'italic', 'underline', 'strike', 'blockquote','code-block',
   'list', 'bullet', 'link', 'image'
 ];
 

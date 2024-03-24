@@ -38,9 +38,9 @@ const NoteText = () => {
     }, [state.selectedNote]);
 
     return (
-        <div className="h-screen w-full p-4 bg-white rounded-lg shadow-sm cursor-text overflow-auto">
+        <div className="h-screen w-full p-4 bg-white rounded-lg shadow-sm cursor-text overflow-hidden">
             {showRichText && <RichTextEditor initialContent={content} onContentChange={handleContentChange} />}
-            {!showRichText && <>No Note Selected</>}
+            {!showRichText && <div className="min-h-screen flex items-center justify-center">No Note Selected</div>}
         </div>
     )
 }

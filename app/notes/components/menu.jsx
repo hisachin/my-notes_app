@@ -15,10 +15,6 @@ const Menu = () => {
                         <MdOutlineDriveFileMove size={20} />
                         <span className="ml-2">Notes</span>
                     </Link>
-                    <Link href="/" className="flex items-center p-2 bg-slate-50 rounded-lg cursor-pointer shadow-sm hover:bg-slate-200 ">
-                        <RiDeleteBinLine size={20} />
-                        <span className="ml-2">Recetly Deleted</span>
-                    </Link>
                 </ul>
             </nav>
 
